@@ -1,2 +1,2 @@
 adapter: 'sqlite3'
-database: 'db/tvshows.db'
+database: '../db/tvshows.db'

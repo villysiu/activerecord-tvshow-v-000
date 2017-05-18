@@ -16,14 +16,14 @@ class Show < ActiveRecord::Base
 #  end
 
   def self.highest_rating
-    Show.order(:rating).last.rating
+    Show.maximum(:rating)
   end
 
   def self.most_popular_show
     Show.order(:rating).last
   end
   def self.lowest_rating
-    Show.order(:rating).first.rating
+    Show.minimum(:rating)
   end
   def self.least_popular_show
     Show.order(:rating).first
